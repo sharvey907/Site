@@ -1,81 +1,268 @@
 ---
 ---
-
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Heartwood Stand</title>
+
+    <style>
+      :root {
+        --bg: #f5f1ea;
+        --surface: #fbf8f3;
+        --text: #1f1c17;
+        --muted: #5e5a53;
+        --accent: #6f7c68;
+        --max-width: 760px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Georgia, "Times New Roman", serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+.hero {
+  position: relative;
+  min-height: 72vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+      .hero img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.34);
+        z-index: 1;
+      }
+
+ .hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  color: white;
+  max-width: 700px;
+  padding: 3rem 2rem 4rem 3rem;
+}
+
+      .hero-content h1 {
+        margin: 0 0 1rem;
+	margin-left: 0;
+        font-size: clamp(2.8rem, 7vw, 5.5rem);
+        line-height: 1.02;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        text-shadow: 0 3px 18px rgba(0, 0, 0, 0.35);
+      }
+
+      .hero-content p {
+        margin: 0;
+        font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+        line-height: 1.5;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+      }
+
+      .content-section {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 4rem 1.5rem;
+      }
+
+      .content-section h2 {
+        font-size: clamp(1.8rem, 4vw, 2.4rem);
+        line-height: 1.15;
+        margin: 0 0 1.25rem;
+      }
+
+      .content-section p {
+        margin: 0 0 1.35rem;
+        font-size: 1.08rem;
+        color: var(--text);
+      }
+
+      .content-section p:last-child {
+        margin-bottom: 0;
+      }
+
+      .intro {
+        background: var(--surface);
+      }
+
+      .process {
+        background: var(--bg);
+      }
+
+      footer {
+        padding: 2.5rem 1.5rem 3rem;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.98rem;
+      }
+
+      @media (max-width: 640px) {
+        .hero {
+          min-height: 62vh;
+        }
+
+        .content-section {
+          padding: 3rem 1.25rem;
+        }
+      }
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  padding: 1.25rem 1.5rem;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-brand a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+.site-menu {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.site-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  padding-bottom: 0.15rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.site-menu a:hover {
+  border-bottom-color: rgba(255, 255, 255, 0.8);
+  opacity: 0.95;
+}
+    </style>
   </head>
 
   <body>
+<header class="site-header">
+  <nav class="site-nav">
+    <div class="site-brand">
+      <a href="/">Heartwood Stand</a>
+    </div>
 
+    <div class="site-menu">
+      <a href="/">Home</a>
+      <a href="#intro">Intro</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#process">Process</a>
+      <a href="#footer">Contact</a>
+    </div>
+  </nav>
+</header>
     <!-- HERO -->
+    <section class="hero">
+      <img src="/images/mist.jpeg" alt="Mist over trees" />
 
-    <section>
-      <img src="/images/mist.jpeg" alt="Mist over trees" style="width:100%;" />
-
-      <h1>Heartwood Stand</h1>
-      <p><em>Work that starts in the forest.<br/>
-      Some of it starts earlier.</em></p>
+      <div class="hero-content">
+        <h1>Heartwood Stand</h1>
+        <p>
+          <em>Work that starts in the forest.<br />
+          Some of it starts earlier.</em>
+        </p>
+      </div>
     </section>
-
 
     <!-- INTRO -->
+    <section class="intro" id="intro">
+      <div class="content-section">
+        <p>
+          Some of the work begins on a bench.
+          Some of it begins a little earlier.
+        </p>
 
-    <section>
+        <p>
+          Heartwood Stand follows wood from where it falls to whatever it becomes next — logs, boards, projects, mistakes, finished pieces, and the occasional good idea.
+        </p>
 
-      <p>
-      Some of the work begins on a bench.
-      Some of it begins a little earlier.
-      </p>
+        <p>
+          The goal isn’t perfection.
+          Just useful things, honest material, and the satisfaction of making something solid.
+        </p>
 
-      <p>
-      Heartwood Stand follows wood from where it falls to whatever it becomes next — logs, boards, projects, mistakes, finished pieces, and the occasional good idea.
-      </p>
-
-      <p>
-      The goal isn’t perfection.
-      Just useful things, honest material, and the satisfaction of making something solid.
-      </p>
-
-      <p>
-      The work might start in the forest.
-      But it’s a jungle out there.
-      </p>
-
+        <p>
+          The work might start in the forest.
+          But it’s a jungle out there.
+        </p>
+      </div>
     </section>
-
 
     <!-- PROCESS -->
+    <section class="process" id="process">
+      <div class="content-section">
+        <h2>From forest to form</h2>
 
-    <section>
+        <p>
+          Fallen timber. Milling. Drying. Shaping.
+          Sometimes building. Sometimes rebuilding.
+          Sometimes just standing there looking at a log,
+          wondering what it wants to become.
+        </p>
 
-      <h2>From forest to form</h2>
-
-      <p>
-      Fallen timber. Milling. Drying. Shaping.
-      Sometimes building. Sometimes rebuilding.
-      Sometimes just standing there looking at a log,
-      wondering what it wants to become.
-      </p>
-
-      <p>
-      This site is a place to keep track of the work,
-      the land, the tools, and whatever comes out of them.
-      </p>
-
+        <p>
+          This site is a place to keep track of the work,
+          the land, the tools, and whatever comes out of them.
+        </p>
+      </div>
     </section>
 
-
     <!-- FOOTER -->
-
     <footer>
-
       <p>
-      Heartwood Stand<br/>
-      Work that starts in the forest.
+        Heartwood Stand<br />
+        Work that starts in the forest.
       </p>
-
     </footer>
-
   </body>
 </html>
