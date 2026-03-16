@@ -1,0 +1,218 @@
+---
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Three Walnut Frames — Heartwood Stand</title>
+
+    <style>
+      :root {
+        --bg: #f5f1ea;
+        --surface: #fbf8f3;
+        --text: #1f1c17;
+        --muted: #5e5a53;
+        --accent: #6f7c68;
+        --max-width: 760px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Georgia, "Times New Roman", serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+      }
+
+      .site-header {
+        padding: 1.25rem 2rem;
+        border-bottom: 1px solid rgba(0,0,0,0.08);
+      }
+
+      .site-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .site-brand a {
+        color: var(--text);
+        text-decoration: none;
+        font-size: 1rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .site-menu {
+        display: flex;
+        gap: 1.25rem;
+      }
+
+      .site-menu a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+
+      .site-menu a:hover {
+        color: var(--text);
+      }
+
+      .journal-header {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 4rem 1.5rem 2rem;
+      }
+
+      .journal-header h1 {
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+        line-height: 1.15;
+        margin-bottom: 0.5rem;
+      }
+
+      .journal-meta {
+        color: var(--muted);
+        font-size: 0.95rem;
+        font-style: italic;
+      }
+
+      .journal-body {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 2rem 1.5rem 4rem;
+      }
+
+      .journal-body p {
+        margin-bottom: 1.35rem;
+        font-size: 1.08rem;
+      }
+
+      .journal-image {
+        margin: 2.5rem 0;
+      }
+
+      .journal-image img {
+        width: 100%;
+        border-radius: 3px;
+        display: block;
+      }
+
+      .journal-image figcaption {
+        margin-top: 0.5rem;
+        font-size: 0.88rem;
+        color: var(--muted);
+        font-style: italic;
+      }
+
+      .image-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin: 2.5rem 0;
+      }
+
+      .image-grid img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 3px;
+        display: block;
+      }
+
+      footer {
+        padding: 2.5rem 1.5rem 3rem;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.98rem;
+        border-top: 1px solid rgba(0,0,0,0.08);
+      }
+
+      .back-link {
+        display: inline-block;
+        margin-bottom: 3rem;
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.95rem;
+        letter-spacing: 0.03em;
+      }
+
+      .back-link:hover {
+        color: var(--text);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="site-nav">
+        <div class="site-brand">
+          <a href="/">Heartwood Stand</a>
+        </div>
+        <div class="site-menu">
+          <a href="/">Home</a>
+          <a href="/journal">Journal</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="journal-header">
+      <a href="/journal" class="back-link">← Journal</a>
+      <h1>Three Walnut Frames</h1>
+      <p class="journal-meta">March 2026</p>
+    </div>
+
+    <div class="journal-body">
+
+      <figure class="journal-image">
+        <img src="/images/journal/walnut-frames/Trio.webp" alt="Three walnut frames arranged together" />
+      </figure>
+
+      <p>
+        A desire to find a home for three images started this project. 
+        That's where this work began.
+      </p>
+
+      <p>
+        A black walnut board, rough cut, had been waiting in the shop 
+        for over a year. Some passes on the joiner, a few runs through 
+        the planer and the grain showed itself. Looked promising.
+      </p>
+
+      <p>
+        Slow experimenting at the miter saw taught how to close the miters.
+      </p>
+
+      <div class="image-grid">
+        <img src="/images/journal/walnut-frames/AllCorner.webp" alt="Miter joint detail" />
+        <img src="/images/journal/walnut-frames/TrioCorner.webp" alt="Corner joinery" />
+      </div>
+
+      <p>
+        The glue up went smoothly. Some sanding up through 220 and then 
+        a few coats of Danish oil seemed to really let the grain pop. 
+        Sometimes less is more when the material is right.
+      </p>
+
+      <figure class="journal-image">
+        <img src="/images/journal/walnut-frames/Grain.webp" alt="Walnut grain detail" />
+      </figure>
+
+      <div class="image-grid">
+        <img src="/images/journal/walnut-frames/AllTogether.webp" alt="All three frames" />
+        <img src="/images/journal/walnut-frames/DeepCorner.webp" alt="Corner detail" />
+      </div>
+
+    </div>
+
+    <footer>
+      <p>Heartwood Stand<br />Work that starts in the forest.</p>
+    </footer>
+
+  </body>
+</html>

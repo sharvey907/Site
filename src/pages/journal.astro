@@ -1,0 +1,184 @@
+---
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Journal — Heartwood Stand</title>
+
+    <style>
+      :root {
+        --bg: #f5f1ea;
+        --surface: #fbf8f3;
+        --text: #1f1c17;
+        --muted: #5e5a53;
+        --accent: #6f7c68;
+        --max-width: 760px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Georgia, "Times New Roman", serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+      }
+
+      .site-header {
+        padding: 1.25rem 2rem;
+        border-bottom: 1px solid rgba(0,0,0,0.08);
+      }
+
+      .site-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .site-brand a {
+        color: var(--text);
+        text-decoration: none;
+        font-size: 1rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .site-menu {
+        display: flex;
+        gap: 1.25rem;
+      }
+
+      .site-menu a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+
+      .site-menu a:hover {
+        color: var(--text);
+      }
+
+      .journal-index {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 4rem 1.5rem;
+      }
+
+      .journal-index h1 {
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+        margin-bottom: 0.5rem;
+      }
+
+      .journal-intro {
+        color: var(--muted);
+        font-style: italic;
+        margin-bottom: 3rem;
+        font-size: 1.05rem;
+      }
+
+      .project-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .project-card {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 1.5rem;
+        text-decoration: none;
+        color: var(--text);
+        border-bottom: 1px solid rgba(0,0,0,0.08);
+        padding-bottom: 2rem;
+      }
+
+      .project-card:hover .project-title {
+        text-decoration: underline;
+      }
+
+      .project-card img {
+        width: 100%;
+        height: 130px;
+        object-fit: cover;
+        border-radius: 3px;
+      }
+
+      .project-meta {
+        color: var(--muted);
+        font-size: 0.9rem;
+        font-style: italic;
+        margin-bottom: 0.5rem;
+      }
+
+      .project-title {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.2;
+      }
+
+      .project-excerpt {
+        color: var(--muted);
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      footer {
+        padding: 2.5rem 1.5rem 3rem;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.98rem;
+        border-top: 1px solid rgba(0,0,0,0.08);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="site-nav">
+        <div class="site-brand">
+          <a href="/">Heartwood Stand</a>
+        </div>
+        <div class="site-menu">
+          <a href="/">Home</a>
+          <a href="/journal">Journal</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="journal-index">
+      <h1>Journal</h1>
+      <p class="journal-intro">
+        A record of the work. What was made, what was learned, 
+        what the wood suggested along the way.
+      </p>
+
+      <div class="project-list">
+        <a href="/journal/walnut-frames" class="project-card">
+          <img 
+            src="/images/journal/walnut-frames/Trio.webp" 
+            alt="Three walnut frames" 
+          />
+          <div>
+            <p class="project-meta">March 2026</p>
+            <h2 class="project-title">Three Walnut Frames</h2>
+            <p class="project-excerpt">
+              Black walnut from the shop. Three frames, two sizes. 
+              The grain showed itself after a few passes on the planer.
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      <p>Heartwood Stand<br />Work that starts in the forest.</p>
+    </footer>
+
+  </body>
+</html>
